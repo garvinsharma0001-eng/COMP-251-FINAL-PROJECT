@@ -1,8 +1,9 @@
+from graph import Graph
 from utils import Package, DispatchQueue
 
 def load_packages(filepath):
   queue = DispatachQueue()
-  section = Npne
+  section = None
 
   with open(filepath, 'r') as f:
     for line in f:
@@ -23,4 +24,56 @@ def load_packages(filepath):
         queue.enqueue(package)
 
 return queue
+
+# Main 
+def main():
+  graph = Graph()
+  graph.load_from_file("../data/network.txt")
+
+  desipatch_queue = load_packages("../data/network.txt")
+
+  while True:
+    print("\n======Smart Network Logistixs Engine========")
+    print("1. Display Network Summary")
+    print("2. Find Shortest Path")
+    print("3. Detect Cycles")
+    print("4. Dispatch Highest-Priority Package")
+    print("5. Exit")
+    print("===========================================")
+
+    choice = input ("Enter choice: ")
+
+    if choice == "1":
+      graph.summary()
+    elif choice == "2":
+      start = input("Enter source: ")
+      end = input("Enter destination: ")
+
+      cost, path = graph.dijkstra(start, end)
+
+      if path:
+        print("Shortest Path: ", "->". join(path))
+        print("Total Cost: ", cost)
+      else:
+        print("No path found")
+
+    elif choice == "3":
+      if graph.has_cycle():
+        print("Cycle detected in the network.")
+      else:
+        print("No cycles found.")
+
+    elif choice == "4":
+      package = dispatch_queue.dequeue()
+      if package:
+        print("Disptached: ", package)
+
+    elif choice == "5":
+      print("Exiting....")
+      break
+
+    else:
+      print("Invalid choice. Try again")
+    
+      
       
