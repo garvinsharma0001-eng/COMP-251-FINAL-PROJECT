@@ -55,4 +55,19 @@ def _resize(self):
   for bucket in old_table:
     for key, value in bucket:
       self.insert(key, value)
+
+def build_depot_map(graph):
+  from hashmap import HashMap
+
+  deport_map = HashMap()
+
+  for node in graph.nodes:
+    data = {
+      "location": "Unknown",
+      "capacity": 100, 
+      "active": True
+    }
+    depot_map.insert(node, data)
+
+  return depot_map
       
