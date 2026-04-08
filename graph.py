@@ -1,3 +1,4 @@
+from heap import MinHeap
 class Graph:
   def _init_(self):
     #adjacency list: {node: [(neighbor, weight)]}
