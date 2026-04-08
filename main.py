@@ -1,5 +1,6 @@
 from graph import Graph
 from utils import Package, DispatchQueue
+from hashmap import HashMap
 
 def load_packages(filepath):
   queue = DispatachQueue()
@@ -24,6 +25,19 @@ def load_packages(filepath):
         queue.enqueue(package)
 
 return queue
+
+# Build Depot HashMap
+def build_depot_map(graph):
+  depot_map = HashMap()
+
+  for node in graph. nodes:
+    data = {
+      "location": "Unknown",
+      "capactiy": 100,
+      "active": True
+    }
+    depot_map.insert(node, data)
+  retrun deport_map
 
 # Main 
 def main():
@@ -74,6 +88,10 @@ def main():
 
     else:
       print("Invalid choice. Try again")
+
+if _name_ == "_main_":
+  main()
+
     
       
       
