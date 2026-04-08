@@ -120,6 +120,37 @@ def get_path (self, prev, start, end):
     return path
   return None
 
+def dijkstra(self, start, end):
+  dist = {node: float('inf') for node in self.nodes}
+  prev = {node: None for node in self.nodes}
+
+  dist[start] = 0
+
+  #MinHeap: (distance, node)
+  heap = MinHeap()
+  heap.push((0, start))
+
+  while not heap.is_empty():
+    current_dist, current_node = heap.pop()
+
+    #Skip outdated entries
+    if current_dist > dist[current_node]:
+      continue
+
+    for neighbor, weight in self.adj.get(current_node, []):
+      new_dist = current_dist + weight
+
+      if new_dist < dis[neighbor]:
+        dist[neighbor] = new_dist
+        prev[neighbor] = current_node
+        heap.push((new_dist, neighbor))
+
+#reconstruct path
+path = self.get_path(prev, start, end)
+
+return dist[end], path
+  
+
 
 
 
