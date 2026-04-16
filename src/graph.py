@@ -44,7 +44,7 @@ def load_from_file(self, filepath):
           self.add_node(node)
       elif section == "edges":
         parts = line.split()
-        u, v, w = parts[0], parts[1], in(parts[2])
+        u, v, w = parts[0], parts[1], int(parts[2])
         self.add_edge(u, v, w)
 
 #Display Summary
