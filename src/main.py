@@ -24,7 +24,7 @@ def load_packages(filepath):
 
         package = Package(pkg_id, priority, destination, weight)
         queue.enqueue(package)
-        return queue
+return queue
 
 # Build Depot HashMap
 def build_depot_map(graph):
@@ -37,7 +37,7 @@ def build_depot_map(graph):
       "active": True
     }
     depot_map.insert(node, data)
-  return deport_map
+  return depot_map
 
 #Build Trie
 def build_trie(graph):
