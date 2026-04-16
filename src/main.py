@@ -24,7 +24,7 @@ def load_packages(filepath):
 
         package = Package(pkg_id, priority, destination, weight)
         queue.enqueue(package)
-return queue
+  return queue
 
 # Build Depot HashMap
 def build_depot_map(graph):
