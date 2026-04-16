@@ -50,9 +50,9 @@ def build_trie(graph):
 # Main 
 def main():
   graph = Graph()
-  graph.load_from_file("../data/network.txt")
+  graph.load_from_file("data/network.txt")
 
-  dispatch_queue = load_packages("../data/network.txt")
+  dispatch_queue = load_packages("data/network.txt")
 
   while True:
     print("\n======Smart Network Logistixs Engine========")
