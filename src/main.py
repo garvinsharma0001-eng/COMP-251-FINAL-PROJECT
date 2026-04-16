@@ -1,7 +1,7 @@
-from src.graph import Graph
-from src.utils import Package, DispatchQueue
-from src.hashmap import HashMap
-from src.trie import Trie
+from graph import Graph
+from utils import Package, DispatchQueue
+from hashmap import HashMap
+from trie import Trie
 
 def load_packages(filepath):
   queue = DispatchhQueue()
