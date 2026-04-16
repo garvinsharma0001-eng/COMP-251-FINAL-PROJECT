@@ -4,7 +4,7 @@ from hashmap import HashMap
 from trie import Trie
 
 def load_packages(filepath):
-  queue = DispatachQueue()
+  queue = DispatchhQueue()
   section = None
 
   with open(filepath, 'r') as f:
