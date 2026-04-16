@@ -22,7 +22,7 @@ def load_packages(filepath):
         destination = parts[2]
         weight = float(parts[3])
 
-        packages = Package(pkg_id, priority, destination, weight)
+        package = Package(pkg_id, priority, destination, weight)
         queue.enqueue(package)
 
 return queue
