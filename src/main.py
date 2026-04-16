@@ -38,7 +38,7 @@ def build_depot_map(graph):
       "active": True
     }
     depot_map.insert(node, data)
-  retrun deport_map
+  return deport_map
 
 #Build Trie
 def build_trie(graph):
