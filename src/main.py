@@ -52,7 +52,7 @@ def main():
   graph = Graph()
   graph.load_from_file("../data/network.txt")
 
-  desipatch_queue = load_packages("../data/network.txt")
+  dispatch_queue = load_packages("../data/network.txt")
 
   while True:
     print("\n======Smart Network Logistixs Engine========")
@@ -97,7 +97,7 @@ def main():
     else:
       print("Invalid choice. Try again")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
   main()
 
     
