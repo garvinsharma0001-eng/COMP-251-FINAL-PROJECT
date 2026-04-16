@@ -22,3 +22,25 @@ hashmap.py --> Custorm hash map
 trie.py --> Autocomplete system
 utils.py --> Package + DispatchQueue
 main.py --> CLI interface
+
+Complexity Analysis:
+1.) Dijkstra's Algoritham (MinHeap)
+    O((V+E)log V) --> Time complexity
+    O(V) --> Space Complexity.
+    Each node is processed once, and each edge relaxation may involve a heap operation.
+2.) Cycle Detection:
+    O(V + E) --> Time Complexity
+    O(V) --> Space Complexity.
+    Each node and edge is visited once.
+3.) MinHeap and MaxHeap
+    INSERT: O(log n)
+    EXTRACT: O(log n)
+    SPACE: O(n)
+4.) HashMap
+    Space: O(n)
+    Worst Case: O(n)
+5.) Trie (Autocomplete)
+    Insert: O(L)
+    Search Prefix: O(L)
+    Here L is length of string
+    
