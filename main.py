@@ -1,6 +1,7 @@
 from graph import Graph
 from utils import Package, DispatchQueue
 from hashmap import HashMap
+from trie import Trie
 
 def load_packages(filepath):
   queue = DispatachQueue()
@@ -38,6 +39,14 @@ def build_depot_map(graph):
     }
     depot_map.insert(node, data)
   retrun deport_map
+
+#Build Trie
+def build_trie(graph):
+  trie = Trie()
+
+  for node in graph.nodes:
+    trie.insert(node)
+  return trie
 
 # Main 
 def main():
